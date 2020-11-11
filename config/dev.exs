@@ -1,21 +1,12 @@
 use Mix.Config
 
-# Configure your database
-config :i_know_you_elixir, IKnowYou.Repo,
-  username: "postgres",
-  password: "postgres",
-  database: "i_know_you_elixir_dev",
-  hostname: "localhost",
-  show_sensitive_data_on_connection_error: true,
-  pool_size: 10
-
 # For development, we disable any cache and enable
 # debugging and code reloading.
 #
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we use it
 # with webpack to recompile .js and .css sources.
-config :i_know_you_elixir, IKnowYouWeb.Endpoint,
+config :i_know_you_elixir, IKnowYou.Web.Endpoint,
   http: [port: 4000],
   debug_errors: true,
   code_reloader: true,
@@ -55,12 +46,12 @@ config :i_know_you_elixir, IKnowYouWeb.Endpoint,
 # different ports.
 
 # Watch static and templates for browser reloading.
-config :i_know_you_elixir, IKnowYouWeb.Endpoint,
+config :i_know_you_elixir, IKnowYou.Web.Endpoint,
   live_reload: [
     patterns: [
       ~r"priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$",
-      ~r"lib/i_know_you_elixir_web/(live|views)/.*(ex)$",
-      ~r"lib/i_know_you_elixir_web/templates/.*(eex)$"
+      ~r"lib/web/(live|views)/.*(ex)$",
+      ~r"lib/web/templates/.*(eex)$"
     ]
   ]
 

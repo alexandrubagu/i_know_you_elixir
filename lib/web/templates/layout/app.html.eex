@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="initial-scale=1, shrink-to-fit=no, width=device-width" name="viewport">
+    <meta name="description" content="I Know You">
+    <meta name="author" content="Alexandru Bagu">
+    <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>">
+    <%= csrf_meta_tag() %>
+  </head>
+  <body>
+    <%= @inner_content %>
+  </body>
+  <script src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+</html>

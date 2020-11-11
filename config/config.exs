@@ -8,14 +8,13 @@
 use Mix.Config
 
 config :i_know_you_elixir,
-  namespace: IKnowYou,
-  ecto_repos: [IKnowYou.Repo]
+  namespace: IKnowYou
 
 # Configures the endpoint
-config :i_know_you_elixir, IKnowYouWeb.Endpoint,
+config :i_know_you_elixir, IKnowYou.Web.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "ovTJfJeTFs0ngTJGIbpBdNakK9s0/uOVPBrtSmvM6xAmWLkYPJtR0A3Q5ULXW6iS",
-  render_errors: [view: IKnowYouWeb.ErrorView, accepts: ~w(html json), layout: false],
+  render_errors: [view: IKnowYou.Web.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: IKnowYou.PubSub,
   live_view: [signing_salt: "sIIHvmQm"]
 
